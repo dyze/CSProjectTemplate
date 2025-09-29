@@ -33,39 +33,67 @@ namespace Project
                                                                """;
 
         private static readonly string GitignoreContent = """
-                                                           [Oo]bj/
-                                                           [Bb]in/
-                                                           .nuget/
-                                                           _ReSharper.*
-                                                           packages/
-                                                           artifacts/
-                                                           *.user
-                                                           *.suo
-                                                           *.userprefs
-                                                           *DS_Store
-                                                           *.sln.ide
-                                                           """;
+                                                          [Oo]bj/
+                                                          [Bb]in/
+                                                          .nuget/
+                                                          _ReSharper.*
+                                                          packages/
+                                                          artifacts/
+                                                          *.user
+                                                          *.suo
+                                                          *.userprefs
+                                                          *DS_Store
+                                                          *.sln.ide
+                                                          """;
 
         private static readonly string NugetConfigContent = """
-                                                             <?xml version="1.0" encoding="utf-8"?>
-                                                             <configuration>
-                                                               <packageSources>
-                                                                 <!--To inherit the global NuGet package sources remove the <clear/> line below -->
-                                                                 <clear />
-                                                                 <add key="nuget" value="https://api.nuget.org/v3/index.json" />
-                                                               </packageSources>
-                                                             </configuration>
-                                                             """;
+                                                            <?xml version="1.0" encoding="utf-8"?>
+                                                            <configuration>
+                                                              <packageSources>
+                                                                <!--To inherit the global NuGet package sources remove the <clear/> line below -->
+                                                                <clear />
+                                                                <add key="nuget" value="https://api.nuget.org/v3/index.json" />
+                                                              </packageSources>
+                                                            </configuration>
+                                                            """;
 
         private static readonly string DirectoryBuildPropsContent = """
-                                                                     <Project>
-                                                                     	<PropertyGroup>
-                                                                     		<BaseIntermediateOutputPath>$(SolutionDir)\artifacts\$(MSBuildProjectName)\$(Configuration)</BaseIntermediateOutputPath>
-                                                                     		<BaseOutputPath>$(SolutionDir)\artifacts\$(MSBuildProjectName)\$(Configuration)</BaseOutputPath>
-                                                                     		<RepositoryType>git</RepositoryType>
-                                                                     	</PropertyGroup>
-                                                                     </Project>
-                                                                     """;
+                                                                    <Project>
+                                                                    	<PropertyGroup>
+                                                                    		<BaseIntermediateOutputPath>$(SolutionDir)\artifacts\$(MSBuildProjectName)\$(Configuration)</BaseIntermediateOutputPath>
+                                                                    		<BaseOutputPath>$(SolutionDir)\artifacts\$(MSBuildProjectName)\$(Configuration)</BaseOutputPath>
+                                                                    		<RepositoryType>git</RepositoryType>
+                                                                    	</PropertyGroup>
+                                                                    </Project>
+                                                                    """;
+
+        /// <summary>
+        /// Taken from https://github.com/othneildrew/Best-README-Template/blob/main/README.md
+        /// </summary>
+        private static readonly string ReadMeContent = """
+                                                              ## About The Project
+                                                              
+                                                              ### Built With
+                                                              
+                                                              ## Getting Started
+                                                              
+                                                              ### Prerequisites
+                                                              
+                                                              ### Installation
+                                                              
+                                                              ## Usage
+                                                              
+                                                              ## Roadmap
+                                                              
+                                                              ## Contributing
+                                                              
+                                                              ## License
+                                                              
+                                                              ## Contact
+                                                              
+                                                              ## Acknowledgments
+                                                              
+                                                              """;
 
         #endregion
 
@@ -77,5 +105,6 @@ namespace Project
         public static readonly byte[] BuildCmdContentInBytes = Encoding.UTF8.GetBytes(BuildCmdContent);
         public static readonly byte[] NugetConfigContentInBytes = Encoding.UTF8.GetBytes(NugetConfigContent);
         public static readonly byte[] DirectoryBuildPropsContentInBytes = Encoding.UTF8.GetBytes(DirectoryBuildPropsContent);
+        public static readonly byte[] ReadMeContentInBytes = Encoding.UTF8.GetBytes(ReadMeContent);
     }
 }

@@ -19,7 +19,7 @@ namespace Project
             await CreateFile("build.sh", content: Constant.BuildCmdContentInBytes);
             await CreateFile("LICENSE");
             await CreateFile("NuGet.Config", content: Constant.NugetConfigContentInBytes);
-            await CreateFile("README.md");
+            await CreateFile("README.md", content: Constant.ReadMeContentInBytes);
             await CreateFile("Directory.Build.props", content: Constant.DirectoryBuildPropsContentInBytes);
             CreateFolder("src");
             CreateFolder("artifacts");
