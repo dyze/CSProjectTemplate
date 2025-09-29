@@ -1,25 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
 	<PropertyGroup>
 		<PackAsTool>true</PackAsTool>
-		<PackageId>dotnet-new-project</PackageId>
-		<ToolCommandName>dotnet-new-project</ToolCommandName>
+		<PackageId>dlabs-dotnet-project-template</PackageId>
+		<ToolCommandName>>dlabs-dotnet-project-template</ToolCommandName>
 
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Nullable>enable</Nullable>
-		<Authors>Shreyas Jejurkar</Authors>
-		<Description>A dontnet cli tool to create initial project structure</Description>
+		<Authors>dyze (fork of Shreyas Jejurkar's project)</Authors>
+		<Description>A dotnet cli tool to create an initial C# project structure following https://gist.github.com/davidfowl/ed7564297c61fe9ab814</Description>
 		<PackageTags>dotnet, cli,</PackageTags>
-		<Copyright>Shreyas Jejurkar 2021</Copyright>
-		<PackageReleaseNotes>Minor bug fixes
-Fixed a bug related to guid in solution file.
-Added Directory.Build.props to remapped bin/obj folder outiside of src inside artifacts</PackageReleaseNotes>
-		<Version>1.0.1</Version>
+		<Copyright>dlabs 2025</Copyright>
+		<PackageReleaseNotes>fork of Shreyas Jejurkar's project</PackageReleaseNotes>
+		<Version>0.1</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
