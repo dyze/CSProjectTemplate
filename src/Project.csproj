@@ -7,20 +7,31 @@
 	<PropertyGroup>
 		<PackAsTool>true</PackAsTool>
 		<PackageId>dlabs-dotnet-project-template</PackageId>
-		<ToolCommandName>>dlabs-dotnet-project-template</ToolCommandName>
+		<ToolCommandName>dlabs-dotnet-project-template</ToolCommandName>
 
-		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<PackageOutputPath>../artifacts</PackageOutputPath>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Nullable>enable</Nullable>
 		<Authors>dyze (fork of Shreyas Jejurkar's project)</Authors>
-		<Description>A dotnet cli tool to create an initial C# project structure following https://gist.github.com/davidfowl/ed7564297c61fe9ab814</Description>
-		<PackageTags>dotnet, cli,</PackageTags>
+		<Description>A dotnet cli tool to create an initial C# project structure following https://gist.github.com/davidfowl/ed7564297c61fe9ab814 schema</Description>
+		<PackageTags>dotnet, cli, dlabs, structure, project</PackageTags>
 		<Copyright>dlabs 2025</Copyright>
-		<PackageReleaseNotes>fork of Shreyas Jejurkar's project</PackageReleaseNotes>
+		<PackageReleaseNotes>Initial fork of Shreyas Jejurkar's project.
+Built for .NET8</PackageReleaseNotes>
 		<Version>0.1</Version>
+		<PackageProjectUrl>https://github.com/dyze/CSProjectTemplate</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/dyze/CSProjectTemplate</RepositoryUrl>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 	  <Optimize>true</Optimize>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 </Project>

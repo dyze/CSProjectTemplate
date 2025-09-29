@@ -9,8 +9,8 @@ namespace Project
         public static async Task Main()
         {
             Console.WriteLine("Initializing new project...");
-            string fullPath = Path.GetFullPath(Directory.GetCurrentDirectory()).TrimEnd(Path.DirectorySeparatorChar);
-            string projectName = Path.GetFileName(fullPath);
+            var fullPath = Path.GetFullPath(Directory.GetCurrentDirectory()).TrimEnd(Path.DirectorySeparatorChar);
+            var projectName = Path.GetFileName(fullPath);
 
             await CreateFile($"{projectName}.sln", content: Constant.SolutionFileContentInBytes);
             await CreateFile(".gitignore", content: Constant.GitIgnoreFileContentInBytes);
@@ -30,12 +30,12 @@ namespace Project
             CreateFolder("samples");
             CreateFolder("tests");
 
-            Console.WriteLine($"Project structure has been created. Click on {projectName}.sln to open solution.");
+            Console.WriteLine($"Project structure has been created. Double-click on {projectName}.sln to open the solution.");
         }
 
         private static async Task CreateFile(string fileName, byte[]? content = null)
         {
-            using FileStream fs = File.Create(Path.Combine(Constant.DirectoryPath, fileName));
+            await using var fs = File.Create(Path.Combine(Constant.DirectoryPath, fileName));
 
             if (content is not null)
             {

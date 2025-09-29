@@ -2,7 +2,7 @@
 	<PropertyGroup>
 		<BaseIntermediateOutputPath>$(SolutionDir)\artifacts\$(MSBuildProjectName)\$(Configuration)</BaseIntermediateOutputPath>
 		<BaseOutputPath>$(SolutionDir)\artifacts\$(MSBuildProjectName)\$(Configuration)</BaseOutputPath>
-		<RepositoryUrl>https://github.com/MCCshreyas/Project</RepositoryUrl>
+		<RepositoryUrl>https://github.com/dyze/CSProjectTemplate</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>

@@ -32,14 +32,14 @@ This folder is considered as [standard folder structure](https://gist.github.com
 
 1. Install CLI tool by running following command. (ignore if already installed)
 ```
-dotnet tool install --global dotnet-new-project
+dotnet tool install --global dlabs-dotnet-project-template
 ```
 
 2. Create a folder for your project and navigate into it. 
 ```
 mkdir AwesomeProject && cd AwesomeProject
 ```
-3. Run `dotnet-new-project` to create folder structure. 
+3. Run `dlabs-dotnet-project-template` to create folder structure. 
 
 ![image](https://user-images.githubusercontent.com/17148381/116717555-a201ad80-a9f6-11eb-8602-f7e192903fad.png)
 
